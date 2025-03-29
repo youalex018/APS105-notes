@@ -25,6 +25,23 @@ typedef struct node {
     struct node *next;
 } Node;
 
+Function examples:
+void freeLinkedList(linkedList *ll);
+bool isEmpty(linkedList *ll);
+int length(linkedList *ll);
+void insertAfter(Node *after, Node *node);
+void insertBefore(linkedList *ll, Node *before, node *node);
+void pushback(linkedList *ll, Node *node);
+Node *pushend(linkedList *ll, int val);
+Node *popfront(linkedList *ll);
+
+How can you determine if a linked list has a loop?
+- 
+
+How can you determine if two linked lists intersect?
+- Get lengths of both linked lists, then start from the same distance from the start of the longer list
+- Traverse both lists with the pointers until you find the intersection
+
 */
 
 #include <stdio.h>

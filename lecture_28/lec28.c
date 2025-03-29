@@ -1,5 +1,6 @@
 /*
 -Structures-
+
 Structures are user-defined data types that can store multiple data types
 - They cannot contain functions and are not dynamically allocated
 - They can contain arrays and other structures
