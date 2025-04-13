@@ -2,6 +2,8 @@
 -Linked Lists-
 - Linear data structure where elements (nodes) are linked using pointers
 - The head is the first node, if the list is empty the head is NULL
+- The last node always points to NULL
+- We always declare a node dynamically on the heap
 
 Advantages:
 - Is dynamic in size, no need to pre-allocate memory

@@ -59,3 +59,18 @@ int binarySearchLast(int array[], int arrayLength, int val) {
     }
     return -1; // Value not found
 }
+
+int recursiveBinarySearch(int list[], int low, int high, int item) {
+    if (high < low)  // failure - item not in list
+      return -1;
+  
+    int middle = (low + high) / 2;
+    if (item == list[middle])  // success
+      return middle;
+  
+    else if (item < list[middle])  // try bottom half
+      return recursiveBinarySearch(list, low, middle - 1, item);
+  
+    else  // try top half
+      return recursiveBinarySearch(list, middle + 1, high, item);
+}

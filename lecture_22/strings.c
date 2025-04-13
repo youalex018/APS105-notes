@@ -15,6 +15,7 @@ printf("%.3s\n", str); // prints first 3 characters of str
 
 Getting string inputs from the user:
 - Avoid scanf and gets as the string will not have any whitespace and number of characters is unknown
+- puts() takes a pointer to the first character in the string, prints the string and a newline chaacter
 - Use fgets as a safer alternative to read a string from the user
 - It prevents buffed overflow by limiting input size, reads a line from a stream (stdin) and stores it in a buffer
 char *fgets(char *str, int n, FILE *stream)

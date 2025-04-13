@@ -26,6 +26,7 @@ struct Person {
 typedef:
 - typedef is used to create an alias for an existing data type
 - typdef struct person means the same thing as Person
+typedef <existing_data_type> <new_data_type_name>;
 
 Example:
 typedef char* string;

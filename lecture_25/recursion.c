@@ -28,6 +28,72 @@ Memoization is an optimization technique used to speed up programs
 - When a function is called with the same inputs, return the cached result instead of recalculating it
 */
 
+#include <stdio.h>
+#include <stdbool.h>
+
+// Function to calculate the greatest common divisor of an integer
+int gcd(int a, int b) {
+    if (a == b) {
+        return a;
+    } else if (a > b) {
+        return gcd(b, a - b);
+    } else {
+        return gcd(b, a);
+    }
+}
+
+// Function to calculate the factorial of a positive integer
+int factorial(int n) {
+    // Base Case
+    if (n == 0) {
+        return 1;
+    } else {
+        // Recursive Call
+        return n * factorial(n - 1);
+    }
+}
+
+// Function to print a row of stars
+void printRow(int n) {
+    if (n == 1) {
+        printf("*\n");
+    } else {
+        printf("*");
+        printRow(n - 1);
+    }
+}
+
+// Function to print a triangle of stars
+void printTriangle(int n) {
+    if (n == 1) {
+        // printf("*\n");
+        printRow(n);
+    } else {
+        // for (int i = 0; i < n; i++) {
+        //     printf("*");
+        // }
+        // printf("\n");
+        printRow(n);
+        printTriangle(n - 1);
+    }
+}
+
+void printInvertedTriangle(int n) {
+    if (n > 0) {
+        printInvertedTriangle(n - 1);
+        printRow(n);
+    }
+}
+
+bool isPalindrome(char *s, int low, int high) {
+    if (low >= high)
+        return true; // Base case: is a palindrome
+    else if (s[low] != s[high])
+        return false; // Base case: is NOT a palindrome
+    else // recursive call: compare the remaining characters from low + 1 to high - 1
+        return isPalindrome(s, low + 1, high - 1);
+}
+
 // Recursive function to calculate the nth Fibonacci number
 int fibonacci(int n) {
     if (n < 2) {
@@ -64,4 +130,12 @@ int memoFibonacci(int n) {
 
     memo[n] = memoFibonacci(n - 1) + memoFibonacci(n - 2); // Store the result in the cache
     return memo[n]; // Return the calculated Fibonacci number
+}
+
+int main(void) {
+    int gcdAnswer = gcd(20, 8);
+    printf("gcd(20, 8) = %d\n", gcdAnswer);
+
+    printTriangle(5);
+    return 0;
 }

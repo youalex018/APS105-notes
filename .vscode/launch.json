@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/alexj/Documents/GitHub/APS105-notes/lecture_26",
-      "program": "c:/Users/alexj/Documents/GitHub/APS105-notes/lecture_26/build/Debug/outDebug",
+      "cwd": "c:/Users/alexj/Documents/GitHub/APS105-notes/lecture_25",
+      "program": "c:/Users/alexj/Documents/GitHub/APS105-notes/lecture_25/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

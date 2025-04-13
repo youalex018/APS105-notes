@@ -1,9 +1,10 @@
 /*
 -Arrays-
 - Fixed sized collection of similar data items in a contigous memory address
-- index starts at 0
-- size or length of an array is the number of elements in the array
-- careful for out of bounds access
+- Index starts at 0
+- Size or length of an array is the number of elements in the array
+- Careful for out of bounds access
+- Are not assignable
 
 data_type array_name[size1][size2][size3]... // for array of N dimensions
 
